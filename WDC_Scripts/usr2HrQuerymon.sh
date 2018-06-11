@@ -1,11 +1,3 @@
-#!/bin/bash
-# AUTHOR : Shashank Rathore
-# Organization: Teradata
-# Desctiption: This script is used to report any user query running for more than 2 Hours. This is currently specific to a teradata client
-# Version : 01.01.00 : optimized for performance.
-# Version : 02.01.00 : script has been modified to report memory usage for non pipeline users.
-#
-
 TIME=`date +%s`
 
 ## JOB_TIME  value are in seconds i.e. 3600 is one hour.
