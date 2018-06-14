@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Author: shashank rathore <shashank.rathore@teradata.com, shashank.rathore07@gmail.com>
 # Nagios Exit Codes
 OK=0
 WARNING=1
