@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# Author: Jon Schipp <jonschipp@gmail.com, jschipp@illinois.edu>
-# Nagios Exit Codes
 OK=0
 WARNING=1
 CRITICAL=2
