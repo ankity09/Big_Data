@@ -1,0 +1,16 @@
+#for commands which are to be run on all the hosts
+[all_servers]
+ambari.local
+w1.local
+w2.local
+
+#for commands specific to the ambari server
+[ambari_server]
+ambari.local
+
+#for commands specific to the worker nodes
+[workers]
+w1.local
+w2.local
+
+

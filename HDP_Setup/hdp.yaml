@@ -1,0 +1,51 @@
+-
+  name: Setup prequistes
+  hosts: all_servers
+  tasks:
+    -
+      name: Disable selinux
+      selinux:
+        state: disbaled
+    -
+      name: package kit disabled 
+      lineinfile:
+        path: /etc/yum/pluginconf.d/refresh-packagekit.conf
+        regexp: 'enabled ='
+        insertafter: 'enabled ='
+        line: '0'    
+    -
+      name: iptables disabled
+      command: chkconfig iptables off
+    -
+      name: iptables stop
+      command: /etc/init.d/iptables stop
+
+
+- 
+  name: Ambari server
+  hosts: ambari_server
+  tasks:
+    -
+      name: Start service httpd, if not running
+      service:
+        name: httpd
+        state: started
+    -
+      name: install the latest version of Apache
+      yum:
+        name: gcc
+        state: latest
+    -
+      name: install the latest version of Apache
+      yum:
+        name: python-devel
+        state: latest
+    -
+      name: install the latest version of Apache
+      yum:
+        name: postgresql-server
+        state: latest
+    -
+      name: setup Script
+      script: /root/hdp_prequisites.sh
+      
