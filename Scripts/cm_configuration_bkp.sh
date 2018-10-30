@@ -7,7 +7,7 @@ DSTPTH=/var/www/html/HGST/CM_Config_Backup/
 LOGPTH=/home/svc-awor-bdppmon/
 
 
-CONFIG_FILE=`ssh username@$SERVER1 curl -k  -u cm_id:cm_pass "https://10.240.0.169:7180/api/v9/cm/deployment" > /path/to/file/BDP_Production.jon`
+CONFIG_FILE=`ssh username@$SERVER1 curl -k  -u cm_id:cm_pass "https://10.240.0.169:7180/api/v9/cm/deployment" > /path/to/file/BDP_Production.json`
 
 
 ssh username@$SERVER1 cat /path/to/file/BDP_Production.json > $DSTPTH/BDP_Production.json
